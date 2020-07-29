@@ -1,0 +1,206 @@
+Ubuntu Linux
+command line interface(cli)
+F11 ( Full screen)___________________________________
+New tab or New window
+ls ( List all file)
+ls -l  (List all commands & controls)
+Linus Shell:
+            Shell in a Linux means a program that serves as the interface between user and the computer operating system.Both graphical user interface and command line interface qualify as a shell. Command line shell available for linux like, the sh shell, zsh shell, c shell and others. the most common shell by far is the bash shell.
+show application_________gui shell
+bash(Born again shell)
+Shell(user interface) like (bash,csh,zsh,tcsh)__________Kernel______________CPU
+Use of Terimenal:
+ls ( List all file)
+ls -l  (List all commands & contralls)
+ls -lh (List all files with their size in Kb)
+Blue coded are directories & white coded are files.
+.conf                                                ( these are configuration file)
+cd /home/syed/Documents                              (To enter into the Documents folder)
+rm file_name                                         (To remove any file)
+rm file_name?.txt
+rm *file_name.txt
+cd                                                   (To come back)
+history                                              (To see history commands)
+clear                                                (To clear all screen)
+Output Piping and Redirects
+The bash shell has two features called "output piping" and "output redirects."
+ls | grep bash 
+cd /home/syed/Documents (To enter into any file)
+cd /home/syed/Desktop
+cd /home/syed/Music
+cd .. or cd             (To come out)
+cd /                    (To enter into bash)_______________________
+cd /bin
+ls | grep le            (To grep any command have  le in it)
+ls | grep se
+ls | grep mk
+ls | grep ba
+                             Text File
+Majority configuration file are text file.
+F12                                              (To see HTML files on browser)
+ls > list    (dangerous command. it will write the folder file name data into list file by replacing the data of list file)
+ls >> list                                    (it will write the folder file name data into list file)
+ls -l >> File_name                            (To make new text file and transfer all data)
+touch file_name                               (To store everything whatever i write)
+cat file_name                                 (To read any text file)
+cat -b file_name
+head file_name                                (To view the beginning of file)
+head -n file_name                             (To view number of lines. n is number of lines)
+cat file_name | grep word_name                (To grep any word in the text file)
+tail file_name                                (To see last 5 lines)
+tail -n file_name                             (To view number of last lines)
+less file_name                                (To see file less lines. to end this ctrl z)
+vi                                            (To see text editor)
+vi file_name                                  (To edit any text file.Do not use this command in /etc folder.It has 4 mods normal mod)    
+                                              (command mod, insert mod, Replace mod)
+cd ~                                          (To come on the home page)
+mkdir directory_name                          (To make new directory)
+mkdir /home/syed/Documents/directory_name     (To make new directory with absolute)
+rmdir directory_name                          (To remove directory)
+mkdir /home/syed/Documents/directory_name     (To remove directory with absolute path)
+whoami                                        (To see user status)
+sudo -i                                       (To change user status from standard to root/admin status)
+cp file_name/Downloads                        (To copy file from Documents to Downloads)
+exit                                          (To exit from root user)
+----------------------------------------------
+( commands to zip file)
+tar -cf filename.tar ~/Documents
+tar -czf filename.tar.gz. ~/Documents
+tar -czvf filename.tar.gz ~/Documents
+tar -xvf filename.tar 
+tar -xzvf file.tar.gz
+----------------------------------------------
+zip -r filename.zip ~/Documents
+unzip filename.zip
+----------------------------------------------
+Ther are 2 kinds of users.
+Standard =syed
+admin/root
+cat file_name                                      (To read or view any file)
+----------------------------------------------
+File controlling users
+Means how many files are controlling users.
+cd /etc/
+cat passwd
+cat shadow
+----------------------------------------------
+vi file_name                                       (To do any modification in file)
+esc esc :q                                         (To come out any file press Esc 2 times then :q then press Enter)
+----------------------------------------------
+useradd billal                                     (To create new user)
+userdel billal                                     (To delete user)
+userdel -r billah                                  (To delete user with home directory)
+useradd -m billal                                  (To create user with home directory)
+useradd -m -s "/bin/bash" billah                   (To create user with home directory & give him access of bash)
+useradd -c "Billah ahmad" -m -s "/bin/bash" billah (To create user with access of bash and show his name in a good way)
+passwd billah                                      (To create password user abdullah)
+usermod -L billah                                  (To lock access of any user)
+usermod -U billah                                  (To unlock access of any user)
+usermod -c "Brother billah" billah                 (To change the display name)
+r=readable, w=writhable, x=Executable, - =Denied
+drwxr-xr-x, dr means directory   xr for Grops, x for others
+su will switch you to the root account without terminating your session.
+In linux groups are also user accounts.
+Type of groups
+user group
+admin group
+---------------------------------------------------------------------
+Inside this group file, they have defined who can do what?
+/etc cat grop
+In this file you will be able to see group IDS.
+/etc cat gshadow
+groups passwd has been saved into this file.
+/etc cat passwd 
+---------------------------------------------------------
+groupadd mujahid                                  (To create a group)
+usermod -G mujahid umer(umer is a user name)      (To move a user into this group mujahid)
+gpasswd -d umer mujahid                           (To remove a user from a group)
+groupdel mujahid                                  (To delete a group)
+chown New_owner_name file_name                    (To change owner of any file)
+chown New_owner_name /home/syed/Document/file_name(To change owner of any file with absolute path)
+chown -R syed file_name                           (To re-change owner back to original owner of any file)
+chown -R syed home/syed/Documents                 (To re-change owner back to original owner of any file with absolute path)
+chgrp New_group_name file_name                    (To change group of any file)
+chgrp New_group_name home/syed/Documents/file_name(To change group of any file with absolute path)
+chgrp -R old_group_name file_name                 (To re-change group of any file back to original the original group)
+chgrp -R old_group_name home/syed/Documents/file_name(To re-change group of any file back to original the original group with absolute path)
+---------------------------------------------------------------------------------               
+                File and Directory permission 
+There are 3 types of permissions r=read w=write x=execute 
+drwxr-xr-x 
+starting 3 words drw define group. next 2 words xr define ownership. 
+chmod u+x file_name                              (To give access to any user of execution. u for owning user & x for execution)
+chmod g+x file_name                              (To give access to any group of execution. u for owning user & x for execution)
+chmod o+x file_name                              (To give access to everyone of execution. u for owning user & x for execution)
+chmod u+x,g+x,o+x file_name                      (To give permission for all privileges)
+chmod u-x,g-x,o-x file_name                      (taking away all privileges)
+--------------------------------------------------------------------------------------
+4=read, 2= write , 1=executive, 0= No permission
+sudo                                             (To use any root command from standard user)
+-------------------------------------------------------------------------------------------
+                                      Networking
+How does it work in Linux?Every operating system have networking without network no system can work even if it is in office, home, organization or any other system.
+                                      IP
+Every computer who needs to go on INTERNET it needs a address named IP address.There are many IP addresses internal & external.
+GUI( Graphical interface user)
+settings->networking->wired                     (to see IP, hardware & other address details from GUI)
+IPV4                                            (old IP address )
+IPV6                                            (New IP address)
+Hardware address                                (Mac or burn in address)
+Default route                                   (if computer needs to go on INTERNET from outside the home it will go through default route)
+DNS(Domain name service)                        (Because of this we know the name of every IP like Google,Facebook etc)
+DHCP(Domain host configuration protocol)
+sudo apt install net-tools                      (To install net tools)
+ifconfig                                        (To see all important properties)
+ifconfig |grep inet                             (To see IP address)
+ifconfig | grep HWaddr/ether                    (To hardware address)
+Default gateway if you are going to internet you must know where ?
+dhclient                                        (To check rtlink file)
+dhclient -r                                     (To release or change IP, It kills connection & refresh IP)
+nslookup distrowach.org                         (to check what is your distro & sever)
+nslookup google.com
+ping 127.0.0.1   or ping address                (To check any address its working or not) 
+df                                              (To see disc space usage in bytes)
+/dev/sda1                                       (It tells us about our main partion)
+df -h                                           (To see space in GB & MB)
+df -th                                          (To see the file system)
+tmpfs                                           (temporary folders)
+du sh /var                                      (To see target file size)
+unmount /media/USBDrive                         (Unmointing removable media disks)
+unmount -f /media/USBDrive                      (To forcefully unmounting media disks)
+-------------------------------------------------------------------------------------------
+                                          Processes
+Procress is stadared method to complete a task. If you a firefox it will open through a procress.
+                                          Demons 
+Demons are interchangeable & critical processes run in background.
+ps                                              (To see processes)
+ps -e       
+ps -el
+ps -elf
+ctrl+                                           (To zoom in)
+ctrl-                                           (To zoom out)
+Bash is a complete language. we will study later. Bash is must for hacking.
+top                                             (To see how any process is working.It is important  for maintenance,networking or administration)
+PID                                             ( Progress ID)
+PR                                              (process priority. the lower the number the higher the priority)
+Ni                                              (Nice value. It goes along PR and effects PR)
+VIRT                                            (Virtual memory)
+RES                                             (Physical memory)
+SHR                                             (shared memory)
+S                                               (Status of process.is it sleeping zombie d,running,uninterruptedly sleep) 
+                                                (or traced)
+kill PID                                        (To kill any process)
+package_name -i installer.deb(for deb file)     (To install any package)
+dpkg -i installer.deb
+package_name -r insteller.deb                   (to uninstall any package)
+dpkg -r installer.deb
+apt-get install package_name                    (To install advanced package tools)
+apt-get remove package_name                     (To uninstall advanced package tools)
+rpm -i installer.rpm                            (Installing repackage software or rpm/pre_package software)
+rpm -e installer.rpm                            (to uninstall)
+yum install package_name                        (Yellow dog updater to install & Uninstall)
+yum remove package_name
+apropos ext3                                    (To get help.It will show the output.If you want to jog your memory for important 
+                                    (process)
+man pages                                 (To see the manul page of all commands)                                                
+man nslookup

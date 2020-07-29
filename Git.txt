@@ -1,0 +1,53 @@
+https://git-scm.com/downloads                                                for installation
+https://git-scm.com/book/en/v2/getting-started-installing-git                installation guide                      
+git init                                                                     To initialize git repository
+git add .  or  git add file-name   or git add *.txt                          To stage any file 
+git commit -m "add file first.txt"                                           To take snap shot or commit
+git status                                                                   To check file status 
+git log                                                                      To see commit history
+git reset   or unstage                                                       To unstage all file from staging area
+git reset --hard       or discard                                            To unstage & remove chaging in the file
+.gitignore      (write the name or extentation of file.To ignore any file or folder from repository. like *.txt  or *.doc or *.js )
+git branch                                                                   To show the list of branches
+git branch -v                                                                To show the list of branches with deatails
+git branch branch-name                                                       To creat new branch
+git checkout dev                                                             To checkout dev branch
+git log dev .. master                                                        To see the difference between dev to master branch
+git log master .. dev                                                        To see the difference between dev to master branch
+git merge dev                                                    From master to merge dev branch into master
+git merge master                                                 From dev to merge master branch into master
+git stash                                                        To temperarely save local changes 
+git stash save <name>                                            To temperarely save local changes with name
+git stash list                                                   To show list of stashes 
+git stash pop                                                    To apply latest stash & remove from the clip board
+git stash apply stashname                                        To apply specific stash and that stash will remain saved in clip board 
+git push                                                         To push changes to remote repository
+git fetch                                                        To fetch changes from remote repository
+git merge                                                        To merge changes that was fetch 
+git pull                                                         To fetch & merge changes from remote repository
+git remote -v                                                    To show remote urls
+git remote show origin                                           To show details of origin 
+git log remote /branch                                           To see remote branch history
+git log origin/master
+git push -u remote branch                                        If local repository connected to remote repository, use this to push
+git push -u origin master
+git remote add name https://github.com/ali-hamdani/secondproject.git   To connect local repository with remote repository
+git remote add orgin https://github.com/ali-hamdani/secondproject.git 
+git clone https://github.com/ali-hamdani/secondproject.git             To clone remote into local directory/folder
+git push remote branch                                                 It is standard command to push 
+git push origin master                      
+git branch -d branch-name                                              To delete any branch from local repository
+git branch -d dev
+git branch -dr remote /branch                                          To delete remote branch from local machine
+git push origin --delete branch-name                                   To delete branch from git hub 
+git reset --hard commit-hash                                           To undo any commit history 
+git reset --hard cb91f54 
+git push -f remote branch                                              To force push
+git push -f origin master                                  
+https://docs.github.com/en/github/writting-on-github/basic-writting-and-formatting-syntax    Mark down language for readme.md file
+                                             Rources to learn git 
+https://www.amazom.com/learn-version-control-step/dp/1520786506
+https://www.git-tower.com/learn/git/ebook
+https://git-scm.com/book/en/v2/Git-branching-rebasing
+https://git-scm.com/book/en/v2/Git-Branching-reamote-Remote-branche#tracking-branches
+https://help.github.com/en/articles/basic-writing-and-formatting-syntax
