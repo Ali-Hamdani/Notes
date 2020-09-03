@@ -1,5 +1,9 @@
 https://git-scm.com/downloads                                                for installation
-https://git-scm.com/book/en/v2/getting-started-installing-git                installation guide                      
+https://git-scm.com/book/en/v2/getting-started-installing-git                installation guide  
+git config --global user.name                                                To check the name
+git config --global user.email                                               To check the email
+git config --global user.name "your name"                                    To write the name
+git config --global user.email "your email"                              To write the email        
 git init                                                                     To initialize git repository
 git add .  or  git add file-name   or git add *.txt                          To stage any file 
 git commit -m "add file first.txt"                                           To take snap shot or commit
