@@ -1,3 +1,13 @@
+                                   Recommended Packages
+book,class,claster,codetools,foreign,kernsmooth,lattice,mgcv,nlme,rpart,survival,mass,spatial,nnet,matrix
+Some useful resources on R
+http://www.r-project.org/doc/bib/R-books.html
+For a quick review of code and syntax.
+Check out cheat sheets
+https://rstudio.com/resources/cheatsheets/
+Install R from https://cran.r-project.org
+Rstudio installation guide
+https://rstudio.com/projects/rstudio/download
 1/0=Inf                                                                          Inf=(infinity)
 1/Inf=0
                            R has 5 basic or atomic Classes of objects
@@ -223,6 +233,7 @@ x
 nrow(x)
 ncol(x)
 row.names(x)=c("A","B","C","D")
+colnames(a)=c("ereere","oho")
 x
  vtr1=c(1:5)
 > vtr2=c("Neel","Jude","Adam","Adithya","Swetha")
@@ -505,7 +516,7 @@ z=factor(c("yes","yes","no","yes","no"),
          levels = c("yes","no"))
 z
 ---------------------------------------------------------------------------------------------------------------------------------------
-                                          Missing Values & Removing NA values
+  	                                        Missing Values & Removing NA values
 x=c(1,2,NA,10,3)
 is.na(x)
 is.nan(x)
@@ -520,6 +531,12 @@ bad=is.na(x)
 bad
 !bad
 x[!bad]
+sd(na.rm=TRUE,a)
+sd(a)
+mean(na.rm=TRUE,a)
+sum(na.rm=TRUE,a)
+min(na.rm=TRUE,a)
+max(na.rm=TRUE,a)
 #What if there are multiple things and you want to take the subset with no missing values.
 x=c(1,2,NA,4,NA,5)
 y=c("a","b",NA,"d",NA,"f")
@@ -553,6 +570,13 @@ y$c
 m<-matrix(1:4,nrow = 2,ncol = 2)
 dimnames(m)<-list(c("a","b"),c("c","d"))
 m
+#data.frame can also have names 
+x=data.frame(day=1:4,rain=c(T,T,F,F))
+x
+nrow(x)
+ncol(x)
+row.names(x)=c("A","B","C","D")
+colnames(a)=c("ereere","oho")
 ----------------------------------------------------------------------------------------------------------------------------------------
                                                    Getting Help
 From R gui windows.
@@ -682,6 +706,16 @@ x[1, ,drop=FALSE]
 [1] "PKT"
 > p$gmtoff
 [1] 18000
+#To enter a date
+x<-as.Date("2012-01-01")
+To change date formate
+datestring<-c("January,10 2012 10:40","December 9,2011 9:10")
+x<-strptime(datestring, "%B %d,%Y %H:%M"
+x
+a<-as.Date("2012-01-01")
+y<-strptime("9 jan 2011 11:34:21","%d %b %Y %H:%M:%s"
+y
+a-y
 ----------------------------------------------------------------------------------------------------------------------------------------
                                                        Loop over a list
   x<-list(a=1:5,b=rnorm(100))
