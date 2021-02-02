@@ -1,0 +1,50 @@
+# Basic methods
+
+class Greeter:
+    def __init__(self,_name):
+        self.name=_name
+    def say_hello(self):
+        print('Hello {}!'.format(self.name))
+    def say_goodbye(self):
+        print('Goodbye {}!'.format(self.name))
+my_greeter=Greeter('john')
+string_var='This is a variable'
+numeric_var=453.324
+#check available methods
+print('\ncheck id,type and methods of an class object')
+print("class id:",id(my_greeter))
+print("class type:",type(my_greeter))
+print("class directory:",dir(my_greeter))
+
+print('\ncheck id,type and methods for a variable containing string value')
+print("string_var id:",id(string_var))
+print("string_var type:",type(string_var))
+print("string_var dir:",dir(string_var))
+
+print('\ncheck id,type and methods for a variable containing numeric value')
+print("numeric_var id:",id(numeric_var))
+print("numeric_var type:",type(numeric_var))
+print("numeric_var attr:",dir(numeric_var))
+
+string_var.islower()
+
+
+#Inspect methods
+
+import inspect
+inspect.getmembers(my_greeter)
+ 
+import os
+testvar='Hello'
+exp=lambda x,y:x*y
+inspect.ismodule(os)
+inspect.isfunction(exp)
+inspect.isfunction(my_greeter.say_goodbye)
+inspect.ismethod(my_greeter.say_goodbye)
+def show_name_age(first_name:str,last_name:str,age:int):
+    print('{} {} is {} years old'.format(first_name,last_name,age))
+sig=inspect.signature(show_name_age)
+print(sig.parameters)
+spt=inspect.signature(string_var.split)
+print(spt.parameters)
+

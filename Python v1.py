@@ -697,45 +697,4 @@ else:
     print("No Exception")
 finally:
     print("finally will always run")
-import datetime
-print(dir(datetime))# dir is to see the directory of date time.
-# print(help(datetime.date))#help is to get help about anything.
-gir=datetime.date(1991,12,13)# To creat a date 
-print(gir)
-# We can access the year , month, day saperately.
-print(gir.year)
-print(gir.month)
-print(gir.day)
-# There is a function named timedelta.It is used to increase or decrease the date.
-dt=datetime.timedelta(100)# 100 is a number of days.positive (+) number will increase the date & Negative (-) number will decrease the date
-print(gir+dt)
-# Now we use date,time, and datetime all 3 together.
-lounch_date=datetime.date(2017,03,30)
-lounch_time=datetime.time(22,27,0)
-lonch_datetime=datetime.datetime(2017,03,30,22,27,0)
-print(lounch_date)
-print(lounch_time)
-print(lonch_datetime)
-# We can access the year , month, day saperately.It is the same in time and datetime function
-print(lounch_time.hour)
-print(lounch_time.minute)
-print(lounch_time.second)
-print(lonch_datetime.year)
-print(lonch_datetime.month)
-print(lonch_datetime.day)
-print(lonch_datetime.hour)
-print(lonch_datetime.minute)
-print(lonch_datetime.second)
-# To access the current date
-now=datetime.datetime.today()#This will show the exect date and time we run the code.it will also show the microseconds.
-print(now)
-print(now.microsecond)
-now1=datetime.date.today()
-print(now1)
-now2=datetime.time()
-print(now2)
-To convet the string datetime into date time object. There is python old version problem, I will deal it later.
- moon_landing="7/29/1969"
- moon_landing_datetime=datetime.datetime.strptime(moon_landing, "%m/%d/%y")
- print(moon_landing_datetime)
- print(type(moon_landing_datetime))
+f

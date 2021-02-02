@@ -77,7 +77,14 @@ https://rstudio.com/projects/rstudio/download
 [1] ",R is fun"
 > 
 --------------------------------------------------------------------------------------------------
-x<-1:8;x                                                                         Series
+                                   Creating sequence
+x<-1:8;x 
+a=seq(from=1,to=10,by=2) #For odd number of sequence
+a
+b=seq(from=2,to=18,by=2)#For even number of sequence
+b
+c=seq(from=0,to=10,by=0.5)#For decimal number of sequence
+c                                                                        Series
                                    Creating vector
 x<-c(0.5,0.6)                                                                    Numeric vector
 x<-c(TRUE,FALSE)                                                                 LOGICAL vector
