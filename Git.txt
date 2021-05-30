@@ -48,6 +48,58 @@ git reset --hard commit-hash                                           To undo a
 git reset --hard cb91f54 
 git push -f remote branch                                              To force push
 git push -f origin master                                  
+
+Markdown language to add formating in Read.md file.
+#                                                                     for highest heading
+##
+###
+####
+#####
+######                                                                for smalest heading
+
+**  **                    ** Bold**                                   To make text bold
+*   *                      * Italic*                                  To make text italic
+~~ ~~                     ~~Strikethrough~~                          To strike any syntack
+*** ***                    ***Bold & Italic**                         To make all bold and italic
+
+>                          >Pardn my french                           To make quations
+
+``` ```                    ```git status
+                              git add .
+                              git commit -m ' df'; ```               To write and show code saperately in text
+
+[ ] (   )                 [youtuebe] (www.youtube.com)               To make link like this
+
+
+-                         -Car
+-                         -bus
+-                         -plane                                     To make unordered list like this
+
+1                         1.Car
+2                         2.Bus
+3                         3.plane                                    To make ondered list
+
+-                       -Vehicles
+1                         1.Car
+2                         2.Bus
+-                        -Residence
+1                         1.House
+2                         2.Appartment                             To Nested list
+
+                         Task list
+
+[x]                      [x] Writng HTML                           X shows that the tast is completed
+[ ]                      [ ] Add Css                               Task is not completed 
+[ ]                      [ ] Adding Javsscript                     Task is not completed                     
+
+
+
+
+
+
+
+
+
 https://docs.github.com/en/github/writting-on-github/basic-writting-and-formatting-syntax    Mark down language for readme.md file
                                              Rources to learn git 
 https://www.amazom.com/learn-version-control-step/dp/1520786506
@@ -55,3 +107,6 @@ https://www.git-tower.com/learn/git/ebook
 https://git-scm.com/book/en/v2/Git-branching-rebasing
 https://git-scm.com/book/en/v2/Git-Branching-reamote-Remote-branche#tracking-branches
 https://help.github.com/en/articles/basic-writing-and-formatting-syntax
+
+
+
